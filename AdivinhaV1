@@ -1,0 +1,55 @@
+```java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.loucademiajava.exercicios;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author luis.assulfi
+ */
+public class AdivinhaV1 {
+    
+    public static void main(String[] args) {
+      
+        //Gerando um número aleatorio
+    //Instanciando a classe Random
+    Random random = new Random();
+    int numeroDaSorte = random.nextInt(99);
+    System.out.println("Debug numero aleatorio: " + numeroDaSorte);
+    
+    //Leitura do numero do usuário
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Informe um número inteiro -> ");
+    int numero = scanner.nextInt();
+    System.out.println();
+    
+    //Verificando se o número inserido pelo usuario é igual ao numero sorteado
+    while (numero != numeroDaSorte){
+        if(numero < numeroDaSorte){
+            System.out.println("Seu numero é menor que o numero da sorte!"
+                    + "\nTente outra vez!");
+            System.out.print("Seu número -> ");
+            numero = scanner.nextInt();
+            System.out.println();
+        } else if (numero > numeroDaSorte){
+            System.out.println("Seu numero é maior que o numero da sorte!"
+                    + "\nTente outra vez!");
+            System.out.print("Seu número -> ");
+            numero = scanner.nextInt();
+            System.out.println();
+        } else {
+            break;
+        }
+    }
+    
+    System.out.println("Parabéns! Você acertou!");
+    
+    }  
+}
+```
