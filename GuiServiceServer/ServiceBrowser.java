@@ -1,5 +1,5 @@
 import java.awt.*;
-import java.swing.*;
+import javax.swing.*;
 import java.rmi.*;
 import java.awt.event.*;
 
